@@ -14,12 +14,17 @@ class AdvancedSearchPage < BasePageWithHeader
   element :enter_item_number_field, :xpath, "//input[@id='_nkw']"
   element :enter_store_name_field, :xpath, "//input[@data-testid='s0-1-17-9[0]-store_search']"
   element :only_show_items_from_checkbox, :xpath, ''
-  element :enter_sellers_field, :xpath, "//input[@id='_sasl']"
+  element :enter_sellers_field, :xpath, "//input[@id='s0-1-17-7[8]-_sasl']"
   element :saved_sellers_list_radiobutton, :xpath, "//input[@id='LH_FavSellers_id']"
   element :sellers_with_ebay_stores_radiobutton, :xpath, "//input[@id='LH_SellerWithStore_id']"
 
   element :search_button, :xpath, "//button[contains(text(),'Search')]", match: :first
-  element :search_button_bottom, :xpath, "//button[@id='searchBtnLowerLnk']"
+  element :search_button_bottom, :xpath, "//button[@class='btn btn--primary']", match: :first
+  element :specific_seller_radio_button, :xpath, "/html/body/div[3]/div/main/form/fieldset[9]/div/div[1]/span/span"
+
+  def click_specific_seller_button
+    specific_seller_radio_button.click
+  end
 
   def click_search_tips_link
     search_tips_link.click
