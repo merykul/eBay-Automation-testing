@@ -25,7 +25,6 @@ Feature: Advanced search
     Given I am on the Ebay Advanced search page
     When I click 'By seller' link
     And I enter "Samsung" in the seller name field
-    And I click 'Sellers with eBay stores' radiobutton
     And I click on the "bottom" search button
     Then I should see "Samsung"
 
