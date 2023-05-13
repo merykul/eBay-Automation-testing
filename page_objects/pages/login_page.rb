@@ -1,6 +1,6 @@
 # frozen string literal: true
 
-require_relative '../../page_objects/base_page_with_header'
+require_relative '../base_page_with_header'
 
 class LoginPage < BasePageWithHeader
   set_url '/signin'
@@ -30,6 +30,7 @@ class LoginPage < BasePageWithHeader
 
   def check_banner
     return unless page.has_text?('Tired of passwords?')
+
     click_on("Don't ask me again")
   end
 end
