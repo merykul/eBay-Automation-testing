@@ -5,7 +5,7 @@ Feature: Advanced search
   Background: Advanced search page is opened
   Given I am on the Ebay Advanced search page
 
-  Scenario Outline: Find by item number
+  Scenario Outline: Verify that user can find item by number
     When I enter item number <number> in the 'Enter keywords or item number' field
     And I click on the "top" search button
     Then I should see <item title>
@@ -16,19 +16,19 @@ Feature: Advanced search
       |   "PKU85147"   | "Elite Trainer Box ETB Crown Zenith Pokemon"                                |
       | "174937115870" | "New Arrive Nylon Replacement Fishing Bottom Rhombus Mesh Fishing Net"      |
 
-  Scenario: Find Store
+  Scenario: Verify that user can search by store name
     When I click 'Find Stores' link
     And I enter "Samsung" in the 'Enter Store name or keywords' field
     And I click on the "top" search button
     Then I should see "Welcome to the official Samsung Store!"
 
-  Scenario: Find by seller
+  Scenario: Verify that user can search by seller
     When I click 'By seller' link
     And I enter "Samsung" in the seller name field
     And I click on the "bottom" search button
     Then I should see "Samsung"
 
-  Scenario: Search tips link checking
+  Scenario: Verify that Search tips link is opening successfully
     When I click hint search tips
     Then I should see "General search tips"
 
