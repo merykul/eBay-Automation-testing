@@ -14,7 +14,7 @@ Feature: Advanced search
       |    number      | item title                                                                  |
       |   "2B040H"     | "Sudee+ Intensive Nourishing Mask 25g x 5ea Anti Wrinkle Soothing K-Beauty" |
       |   "PKU85147"   | "Elite Trainer Box ETB Crown Zenith Pokemon"                                |
-      | "174937115870" | "New Arrive Nylon Replacement Fishing Bottom Rhombus Mesh Fishing Net"      |
+      | "174937115870" | "No exact matches found"                                                    |
 
   Scenario: Find Store
     When I click 'Find Stores' link
