@@ -13,13 +13,10 @@ class LoginPage < BasePageWithHeader
 
   def login(email, password)
     check_capcha
-
     username_field.set(email)
     continue_button.click
-
     password_field.set(password)
     login_button.click
-
     check_banner
   end
 
@@ -33,7 +30,6 @@ class LoginPage < BasePageWithHeader
 
   def check_banner
     return unless page.has_text?('Tired of passwords?')
-
     click_on("Don't ask me again")
   end
 end
